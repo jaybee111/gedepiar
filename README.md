@@ -1,14 +1,13 @@
-# Gedepiar - Cookie-Banner based on GDPR Guidelines
+# Gedepiar
 A dependency-free Cookie-Banner for managing  cookies and external scripts of your website/webapp. Based on GDPR-Guidelines
 
 ## Table of contents
 
 - [Installation](#installation)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
+- [Usage](#usage)
+- [Services](#services)
+- [Translation](#translation)
+- [Notes](#note)
 - [License](#license)
 
 ## Installation
@@ -21,7 +20,7 @@ Recommended step for projects with integrated module bundler (e.g. Webpack) or t
 ### Installation via cloning repo
 Recommended step for projects without a task-runner or module bundler.
 
-1. Open your shell and clone the repo ``git clone .....``
+1. Open your shell and clone the repo ``git clone git@github.com:jaybee111/gedepiar.git``
 2. Afterwards run ``npm run build``
 3. Switch to the newly created directory ``dist`` and copy ``gedepiar.min.js`` and ``gedepiar.min.css`` to your projects assets folder. 
 4. Add the CSS-File to the head-Tag: ``<link rel="stylesheet" href="/path/to/css/gedepiar.min.css">``
@@ -47,7 +46,7 @@ Add data-attributes to HTML-Tags. For further information go to [Services](#serv
 
 | Attribute     | Type          | Default  | Description  |
 | ------------- | ------------- | -------- | -------- |
-| services      | array         | []       | Services to be managed by the cookie banner. Possibile options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#own-services).
+| services      | array         | []       | Services to be managed by the cookie banner. Possibile options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
 | i18n          | object        | {}       | Override default translation. Look at [Translation](#translation) for further information.
 | fallbackLang  | string        | en       | If the translation is not available, the defined language is loaded
 
@@ -136,46 +135,14 @@ Gedepiar.init({
 
 ````
 
-##### Translation
-
-If you added an individual service you have to adjust the initialization process by adding entries to the translation object.
-
-````
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService],
-    'i18n': {
-        'de' : {
-            'twitterHeadline': 'Twitter',
-            'twitterOverlayHeadline': 'Twitter is deaktiviert',
-            'twitterOverlayContent': 'Das ist eine Beschreibung zum Twitter-Plugin',
-            'twitterOverlayBtnLabel': 'Aktivieren',
-        },
-        {
-        'en' : {
-            'twitterHeadline': 'Twitter',
-            'twitterOverlayHeadline': 'Twitter',
-            'twitterOverlayContent': 'A description about the Twitter-Plugin',
-            'twitterOverlayBtnLabel': 'Activate',
-        }
-    }
-});
-````
-
-Every individual need following translation keys:
-
-- ``[INDIVIDUAL-SERVICE-ALIAS]Headline``
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayHeadline`` (optional, is only needed if overlay is present)
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayContent`` (optional, is only needed if overlay is present)
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayBtnLabel``(optional, is only needed if overlay is present)
-
-The custom translation entries are merged with the default translation entries.
-
 #### Options
 
 | Attribute     | Type          | Default  | Description  |
 | ------------- | ------------- | -------- | -------- |
 | alias         | string        |          | Your unique service alias
 | category      | string        |          | Possibile options: `comfort`, `mandatory`, `analyze`
+
+**Don't** forget to add translations. Look at [translation section](#service-translation)
 
 #### Events
 
@@ -236,7 +203,7 @@ Gedepiar.init({
 
 ````
 
-## Translation
+### Translation
 
 Would you like to overwrite a default translation entry? Add the i18n-Option to the init-Function.
 Look at ``[PATH_TO_NODE_MODULES]/gedepiar/src/js/i18n/`` for all possibile entries. 
@@ -281,7 +248,41 @@ Gedepiar.init({
 });
 ````
 
-# FAQ
+#### Service translation
 
-# License
+If you added an individual service you have to adjust the initialization process by adding entries to the translation object.
+
+````
+Gedepiar.init({
+    'services' : ['phpsess','ga','gmap','yt',twitterService],
+    'i18n': {
+        'de' : {
+            'twitterHeadline': 'Twitter',
+            'twitterOverlayHeadline': 'Twitter is deaktiviert',
+            'twitterOverlayContent': 'Das ist eine Beschreibung zum Twitter-Plugin',
+            'twitterOverlayBtnLabel': 'Aktivieren',
+        },
+        {
+        'en' : {
+            'twitterHeadline': 'Twitter',
+            'twitterOverlayHeadline': 'Twitter',
+            'twitterOverlayContent': 'A description about the Twitter-Plugin',
+            'twitterOverlayBtnLabel': 'Activate',
+        }
+    }
+});
+````
+
+Every individual need following translation keys:
+
+- ``[INDIVIDUAL-SERVICE-ALIAS]Headline``
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayHeadline`` (optional, is only needed if overlay is present)
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayContent`` (optional, is only needed if overlay is present)
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayBtnLabel``(optional, is only needed if overlay is present)
+
+The custom translation entries are merged with the default translation entries.
+
+## Notes
+
+## License
 This project is available under the [MIT](https://opensource.org/licenses/mit-license.php) license.
