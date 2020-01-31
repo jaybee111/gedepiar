@@ -142,7 +142,7 @@ Gedepiar.init({
 | alias         | string        |          | Your unique service alias
 | category      | string        |          | Possibile options: `comfort`, `mandatory`, `analyze`
 
-**Don't** forget to add translations. Look at [translation section](#service-translation)
+**Don't** forget to add translations. Look at [translation section](#service-translation).
 
 #### Events
 
@@ -283,6 +283,8 @@ Every individual need following translation keys:
 The custom translation entries are merged with the default translation entries.
 
 ## Notes
+
+The tool does **not** claim legal certainty. Please contact a lawyer for a legally compliant check of your web application.
 
 ## License
 This project is available under the [MIT](https://opensource.org/licenses/mit-license.php) license.
