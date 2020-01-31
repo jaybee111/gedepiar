@@ -1,0 +1,68 @@
+.gedepiar-overlay__wrapper {
+  position: relative;
+  height:100%;
+  width:100%;
+}
+
+.gedepiar-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:$gedepiar-bg-color-overlay;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1000;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h3 {
+    font-size:$gedepiar-font-size-h3;
+    color:$gedepiar-color-text;
+    margin:0 0 20px;
+    padding:0;
+    text-align: center;
+  }
+
+  p {
+    font-size:$gedepiar-font-size-base;
+    color:$gedepiar-color-text;
+    margin:0 0 20px;
+    padding:0;
+  }
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.gedepiar-overlay__inner {
+  padding:30px;
+  margin: auto;
+  max-height: 100%;
+}
+
+.gedepiar-overlay__btn {
+  padding:10px;
+  display: block;
+  width:150px;
+  margin:0 auto;
+  text-align: center;
+  border-radius:3px;
+  transition: all 500ms ease;
+  font-size:$gedepiar-font-size-base;
+  text-decoration: none;
+  background-color:$gedepiar-color-primary;
+  color:#fff;
+
+  &:hover {
+    opacity: 0.9;
+    transition: all 500ms ease;
+    color:#fff;
+  }
+}

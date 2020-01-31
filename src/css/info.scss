@@ -92,6 +92,24 @@
   }
 }
 
+.gedepiar-info__footnav {
+  margin:20px 0 0 0;
+  padding:0;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin:0 10px 0 0;
+
+    a {
+      font-size:$gedepiar-font-size-sm;
+      color:$gedepiar-color-text;
+      opacity:0.5;
+      text-decoration: none;
+    }
+  }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .gedepiar-info__btn {

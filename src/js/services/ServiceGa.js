@@ -1,6 +1,6 @@
 const ServiceGa = {
   alias: 'ga',
-  category: 'statistics',
+  category: 'analyze',
   translation: '',
   /* 'onInit' : function () {
 

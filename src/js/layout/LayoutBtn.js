@@ -16,6 +16,9 @@ export default class LayoutBtn {
     if (typeof this.data.label === 'string') {
       btn.innerText = this.data.label;
     }
+    if (typeof this.data.labelHtml === 'string') {
+      btn.innerHTML = this.data.labelHtml;
+    }
 
     if (Array.isArray(this.data.attributes)) {
       this.data.attributes.forEach((item) => {

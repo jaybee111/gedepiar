@@ -1,6 +1,6 @@
-const ServiceYt = {
-  alias: 'yt',
-  category: 'comfort',
+const ServicePhpSession = {
+  alias: 'phpsess',
+  category: 'mandatory',
   translation: '',
   /* 'onInit' : function () {
 
@@ -13,4 +13,4 @@ const ServiceYt = {
   } */
 };
 
-export default ServiceYt;
+export default ServicePhpSession;

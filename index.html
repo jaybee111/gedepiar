@@ -39,23 +39,21 @@
                 height:100%;
             }
 
-        </style>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script data-cntx-cookie-service="ga" async src="https://www.googletagmanager.com/gtag/js?id=UA-80725479-2" type="text/plain"></script>
-        <script data-cntx-cookie-service="ga" type="text/plain">
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            .gedepiar-overlay__wrapper-yt {
+              position: absolute !important;
+              top:0;
+              left:0;
+            }
 
-          gtag('config', 'UA-80725479-2');
-        </script>
+        </style>
     </head>
     <body>
         <!-- Google Maps -->
-         <div class="gmap-wrapper">
-             <div id="map" class="gmap" data-cntx-cookie-service="gmap" data-cntx-cookie-overlay-parent=".gmap-wrapper"></div>
+        <div class="gmap-wrapper">
+          <div id="map" class="gmap" data-gedepiar-service="gmap" data-gedepiar-overlay></div>
         </div>
-        <script data-cntx-cookie-service="gmap" type="text/plain">
+
+        <script data-gedepiar-service="gmap" type="text/plain">
           var map;
           function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -68,15 +66,15 @@
 
         <!-- Youtube -->
         <div class="yt-wrapper">
-            <iframe data-cntx-cookie-service="yt" data-cntx-cookie-overlay-parent=".yt-wrapper" width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe data-gedepiar-service="yt" data-gedepiar-overlay width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <script data-cntx-cookie-service="gmap" type="text/plain" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB43ocyhvjXdLj5eJtU_EB0oNp5mlw3p4k" async defer type="text/plain"></script>
-
+        <!-- Gmap Script -->
+        <script data-gedepiar-service="gmap" type="text/plain" src="https://maps.googleapis.com/maps/api/js" async defer type="text/plain"></script>
         <script>
             window.onload = function () {
               Gedepiar.init({
-                'services' : ['ga']
+                'services' : ['phpsess','gmap','yt']
               });
             };
         </script>
