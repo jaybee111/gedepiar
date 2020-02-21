@@ -1,5 +1,5 @@
 # Gedepiar
-A dependency-free Cookie-Banner for managing  cookies and external scripts of your website/webapp. Based on GDPR-Guidelines
+A dependency-free cookie-banner for managing cookies and external scripts of your website/webapp. Based on GDPR-Guidelines.
 
 ## Table of contents
 
@@ -16,6 +16,7 @@ A dependency-free Cookie-Banner for managing  cookies and external scripts of yo
 Recommended step for projects with integrated module bundler (e.g. Webpack) or task-runner (e.g. Gulp).
 1. ``npm install gedepiar --save``
 2. Integrate it via the import statement ``import Gedepiar from 'gedepiar'``
+3. Add content of ``[PATH_TO_NODE_MODULES]/gedepiar/dist/gedepiar.min.css`` to your stylesheets`
 
 ### Installation via cloning repo
 Recommended step for projects without a task-runner or module bundler.
@@ -28,54 +29,38 @@ Recommended step for projects without a task-runner or module bundler.
 
 ## Usage
 
-Add ``lang`` - Attribute to html-Tag. Otherwise english or the defined fallback language is used as default language.
+1. Add ``lang`` - Attribute to html-Tag. Otherwise english or the defined fallback language is used as default language.
+    ``<html lang="en">``
 
-``<html lang="de">``
+2. Add init-function to your JavaScript-File:
+    ````
+    // yourCustom.js
+    Gedepiar.init({
+        'services' : ['phpsess','ga','gmap','yt']
+    });
+    ````
+   **Options**
 
-Add init-function to your JavaScript-File:
-````
-// yourCustom.js
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt']
-});
-````
+    | Attribute     | Type          | Default  | Description  |
+    | ------------- | ------------- | -------- | -------- |
+    | services      | array         | []       | Services to be managed by the cookie banner. Possible options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
+    | i18n          | object        | {}       | Override default translation. Look at [Translation](#translation) for further information.
+    | fallbackLang  | string        | en       | If the translation is not available, the defined language is loaded
 
-Add data-attributes to HTML-Tags. For further information go to [Services](#services).
-
-### Options
-
-| Attribute     | Type          | Default  | Description  |
-| ------------- | ------------- | -------- | -------- |
-| services      | array         | []       | Services to be managed by the cookie banner. Possibile options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
-| i18n          | object        | {}       | Override default translation. Look at [Translation](#translation) for further information.
-| fallbackLang  | string        | en       | If the translation is not available, the defined language is loaded
+3. Add data-attributes to HTML-Tags. For further information go to [Services](#services).
 
 ## Services
 
-Every service has an unique alias. This alias is used to identify the related html-Tags ``data-gedepiar-service="[SERVICE-ALIAS]"``.
-In addition the html elements must be marked as follows:
+Every service has an unique alias (e.g. Google Analytics = ga). This alias is used to identify the related HTML-Tags ``data-gedepiar-service="[SERVICE-ALIAS]"``.
 
-**External or local script**
+**data-attributes**
 
-````
-<script data-gedepiar-service="[SERVICE-ALIAS]" type="text/plain" src="[SCRIPT-SRC]"></script>
-````
+| Attribute     | Description  |
+| ------------- | --------- |
+| data-gedepiar-service | This alias is used to identify the related HTML-Tags ``data-gedepiar-service="[SERVICE-ALIAS]"``
+| data-gedepiar-overlay | Adds an html-Wrapper which includes explanatory service text and an activation button. This wrapper will be present until the user clicked the activation button. After clicking the activation button the external resource will be loaded (e.g. [Youtube](#youtube))
 
-**iframe and overlay**
-
-````
-<iframe data-gedepiar-service="[SERVICE-ALIAS]" data-gedepiar-overlay data-src="[IFRAME-SRC]"></iframe>
-````
-
-**div and overlay**
-
-````
-<div data-gedepiar-service="[SERVICE-ALIAS]" data-gedepiar-overlay>
-    External service injects some html
-</div>
-````
-
-___TODO show overlay image
+The html elements must be marked as follows:
 
 ### Google Maps
 
@@ -142,9 +127,11 @@ Gedepiar.init({
 | alias         | string        |          | Your unique service alias
 | category      | string        |          | Possibile options: `comfort`, `mandatory`, `analyze`
 
-**Don't** forget to add translations. Look at [translation section](#service-translation).
+**Don't** forget to add translations for your individual service. Look at [translation section](#service-translation).
 
 #### Events
+
+Do you need additional behavior? You can hook into the processes of the lib with events:
 
 **onInit(elements,settings)**
 
@@ -206,7 +193,7 @@ Gedepiar.init({
 ### Translation
 
 Would you like to overwrite a default translation entry? Add the i18n-Option to the init-Function.
-Look at ``[PATH_TO_NODE_MODULES]/gedepiar/src/js/i18n/`` for all possibile entries. 
+Look at ``[PATH_TO_NODE_MODULES]/gedepiar/src/js/i18n/`` for all possible entries. 
 
 ````
 Gedepiar.init({
@@ -250,7 +237,7 @@ Gedepiar.init({
 
 #### Service translation
 
-If you added an individual service you have to adjust the initialization process by adding entries to the translation object.
+By adding an individual service you have to adjust the initialization process by adding entries to the translation object.
 
 ````
 Gedepiar.init({

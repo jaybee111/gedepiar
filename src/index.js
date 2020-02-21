@@ -89,6 +89,7 @@ export default class Gedepiar {
     // Activate services
     const activateServices = settings.servicesAliasList.filter((item) => localStorage.getItem(`gedepiar-enabled-${item}`) === 'true');
     settings.eventbus.publish('services-activate', activateServices);
+
     return settings;
   }
 }
