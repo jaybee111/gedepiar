@@ -2,8 +2,6 @@ name: Publish to npm and create release
 
 on:
   push:
-    branches:
-      - "master"
     tags:
       - "v*"
 
