@@ -70,5 +70,8 @@
         "rules": {
             "linebreak-style": 0
         }
-    }
+    },
+    "browserslist": [
+        "defaults"
+    ]
 }
