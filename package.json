@@ -1,7 +1,7 @@
 {
     "name": "gedepiar",
-    "version": "0.1.0",
-    "description": "A dependency-free Cookie-Banner for managing your website/webapp cookies and external ressources. Based on GDPR-Guidelines.",
+    "version": "0.0.1",
+    "description": "A dependency-free JavaScript-Tool for managing your cookies of your website/webapp. Based on GDPR-Guidelines.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,7 @@
         "url": "git+https://github.com/jaybee111/gedepiar.git"
     },
     "author": "Jonas Böttcher",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "bugs": {
         "url": "https://github.com/jaybee111/gedepiar/issues"
     },
