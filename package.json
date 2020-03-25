@@ -14,7 +14,7 @@
         "url": "git+https://github.com/jaybee111/gedepiar.git"
     },
     "author": "Jonas Böttcher",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/jaybee111/gedepiar/issues"
     },
