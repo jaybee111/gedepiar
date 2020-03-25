@@ -1,0 +1,128 @@
+.gedepiar-info {
+  background-color:#fff;
+  position: fixed;
+  z-index:9000;
+  padding:15px;
+  display: none;
+  box-shadow: -1px -5px 36px -11px rgba(0,0,0,0.2);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &.is-open {
+    display: block;
+  }
+
+  &.is-full-width {
+    width:100%;
+    padding:30px 15px;
+    bottom:0;
+    left:0;
+
+    .gedepiar-info__inner {
+      max-width:1140px;
+      margin:0 auto;
+    }
+  }
+
+  &.is-right {
+    width:290px;
+    right:15px;
+    bottom:15px;
+    padding:15px;
+    border-radius:5px;
+  }
+
+  &.is-left {
+    left:15px;
+    bottom:15px;
+    padding:15px 0;
+  }
+
+  p {
+    margin:0 0 20px;
+    font-size:$gedepiar-font-size-base;
+    color:$gedepiar-color-text;
+  }
+}
+
+.gedepiar-info__data-privacy-link {
+  font-size:$gedepiar-font-size-base;
+  text-decoration: none;
+  color:$gedepiar-color-primary;
+
+  &:hover {
+    color:$gedepiar-color-primary;
+  }
+}
+
+.gedepiar-info__btn {
+  padding:15px;
+  display: block;
+  text-align: center;
+  border-radius:3px;
+  transition: all 500ms ease;
+  font-size:$gedepiar-font-size-base;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    transition: all 500ms ease;
+    color:#fff;
+  }
+}
+
+.gedepiar-info__btn-accept {
+  background-color:$gedepiar-color-primary;
+  text-decoration: none;
+  color:#fff;
+
+  &:hover {
+    color:#fff;
+  }
+}
+
+.gedepiar-info__btn-edit {
+  color:$gedepiar-color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color:$gedepiar-color-primary;
+  }
+}
+
+.gedepiar-info__footnav {
+  margin:20px 0 0 0;
+  padding:0;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin:0 10px 0 0;
+
+    a {
+      font-size:$gedepiar-font-size-sm;
+      color:$gedepiar-color-text;
+      opacity:0.5;
+      text-decoration: none;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .gedepiar-info__btn {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .gedepiar-info {
+    &.is-right {
+      width:500px;
+    }
+  }
+}
