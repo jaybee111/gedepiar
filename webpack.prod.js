@@ -20,7 +20,6 @@ ${pkg.description}\n
 @repository ${pkg.repository.url}`;
 
 module.exports = {
-    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         filename: libraryName+'.min.js',
@@ -29,9 +28,6 @@ module.exports = {
         library: 'Gedepiar',
         umdNamedDefine: true,
         globalObject: '(typeof self !== \'undefined\' ? self : this)'
-    },
-    node: {
-        fs: 'empty'
     },
     module: {
         rules: [
@@ -53,24 +49,19 @@ module.exports = {
                     {
                         // translates CSS into CommonJS
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
                     },
                     {
                         // Runs compiled CSS through postcss for vendor prefixing
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
                     },
                     {
                         // compiles Sass to CSS
                         loader: 'sass-loader',
                         options: {
-                            outputStyle: 'expanded',
-                            sourceMap: true,
-                            sourceMapContents: true
+                            sassOptions: {
+                                outputStyle: 'compressed',
+                            },
+                            prependData: '@import "variables.scss";'
                         }
                     }
                 ]
@@ -101,11 +92,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            // Inject the js bundle at the end of the body of the given template
-            inject: 'body',
-        }),
         new CleanWebpackPlugin(),
         /*new FaviconsWebpackPlugin({
             // Your source logo
