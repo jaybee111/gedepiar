@@ -1,5 +1,5 @@
 # Gedepiar
-A dependency-free cookie-banner for managing cookies and external scripts of your website/webapp. Based on GDPR-Guidelines.
+A dependency-free Cookie-Banner for managing your website/webapp cookies and external ressources. Based on GDPR-Guidelines 
 
 ## Table of contents
 
