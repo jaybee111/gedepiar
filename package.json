@@ -8,9 +8,9 @@
         "serve": "webpack-dev-server --config webpack.dev.js --mode development",
         "build": "webpack --config webpack.prod.js --mode production",
         "preview": "npm run build && http-server dist",
-        "release-patch": "npm version patch && git push --tags",
-        "release-minor": "npm version minor && git push --tags",
-        "release-major": "npm version major && git push --tags"
+        "release-patch": "npm version patch && git push origin master && git push --tags",
+        "release-minor": "npm version minor && git push origin master && git push --tags",
+        "release-major": "npm version major && git push origin master && git push --tags"
     },
     "repository": {
         "type": "git",
