@@ -2,8 +2,8 @@ name: Publish to npm and create release
 
 on:
   push:
-    branches:
-      - refs/tags/@orgname/*
+    tags:
+      - "v*"
 
 jobs:
   build:
