@@ -11,7 +11,7 @@
         "version-patch": "cross-env npm version patch && git add . && git commit -am 'v$npm_package_version'",
         "version-minor": "cross-env npm version minor && git add . && git commit -am 'v$npm_package_version'",
         "version-major": "cross-env npm version major && git add . && git commit -am 'v$npm_package_version'",
-        "publish": "cross-env git tag v$npm_package_version && git push origin v$npm_package_version"
+        "publish": "cross-env git push origin master && git tag v$npm_package_version && git push origin v$npm_package_version"
     },
     "repository": {
         "type": "git",
