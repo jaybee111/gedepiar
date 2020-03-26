@@ -8,9 +8,9 @@
         "serve": "webpack-dev-server --config webpack.dev.js --mode development",
         "build": "webpack --config webpack.prod.js --mode production",
         "preview": "npm run build && http-server dist",
-        "release-patch": "cross-env npm version patch && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin master && git push origin v$npm_package_version",
-        "release-minor": "cross-env npm version minor && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin master && git push origin v$npm_package_version",
-        "release-major": "cross-env npm version major && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin master && git push origin v$npm_package_version"
+        "release-patch": "cross-env npm version patch && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin v$npm_package_version",
+        "release-minor": "cross-env npm version minor && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin v$npm_package_version",
+        "release-major": "cross-env npm version major && git add . && git commit -am 'v$npm_package_version' && git tag v$npm_package_version && git push origin v$npm_package_version"
     },
     "repository": {
         "type": "git",
