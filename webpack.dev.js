@@ -1,9 +1,5 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const pkg = require('./package.json');
-
 const libraryName = 'gedepiar';
 
 module.exports = {
@@ -21,9 +17,6 @@ module.exports = {
         libraryExport: 'default',
         umdNamedDefine: true,
         globalObject: '(typeof self !== \'undefined\' ? self : this)'
-    },
-    node: {
-        fs: 'empty'
     },
     module: {
         rules: [
