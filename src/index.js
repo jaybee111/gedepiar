@@ -47,7 +47,8 @@ export default class Gedepiar {
     settings.servicesCategorized = LibServices.prepareCategorized(settings.servicesList);
 
     // Set current language
-    settings.lang = (typeof document.querySelector('html').getAttribute('lang') !== 'undefined' ? document.querySelector('html').getAttribute('lang') : settings.fallbackLang);
+    const htmlLang = document.querySelector('html').getAttribute('lang');
+    settings.lang = (typeof htmlLang !== 'undefined' ? htmlLang.trim().slice(0, 2).toLowerCase() : settings.fallbackLang);
 
     // Merge custom translations with default translations
     if (typeof customSettings.i18n === 'object') {
