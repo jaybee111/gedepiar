@@ -13,7 +13,7 @@ module.exports = {
         filename: libraryName+'.js',
         path: buildPath,
         libraryTarget: 'umd',
-        library: 'Gedepiar',
+        library: 'gedepiar',
         umdNamedDefine: true,
         globalObject: '(typeof self !== \'undefined\' ? self : this)'
     },
