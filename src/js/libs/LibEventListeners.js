@@ -49,7 +49,7 @@ export default class LibEventListeners {
   }
 
   /**
-   * Execute custom activate-Function, set Localstorage-Item and activate checkbox
+   * Execute custom activate-Function and activate checkbox
    */
   activateServices() {
     this.settings.eventbus.subscribe('services-activate', (servicesActivate) => {
@@ -118,12 +118,11 @@ export default class LibEventListeners {
           service.onActivate(elements, this.settings);
         }
       });
-      localStorage.setItem('gedepiar-accepted', true);
     });
   }
 
   /**
-   * Execute Custom disable-Function, set Localstorage-Item and disable checkbox
+   * Execute Custom disable-Function and disable checkbox
    */
   disableServices() {
     this.settings.eventbus.subscribe('services-disable', (servicesDisable) => {
@@ -149,7 +148,6 @@ export default class LibEventListeners {
           item.onDisable(elements, this.settings);
         }
       });
-      localStorage.setItem('gedepiar-accepted', true);
     });
   }
 }

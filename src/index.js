@@ -81,10 +81,9 @@ export default class Gedepiar {
 
     // Add Cookie-Info to DOM
     const info = new LayoutInfo(settings).render();
-    if (localStorage.getItem('gedepiar-enabled') !== 'true') {
+    if (localStorage.getItem('gedepiar-accepted') !== 'true') {
       info.classList.add('is-open');
     }
-    info.classList.add('is-open');
     body.appendChild(info);
 
     // Activate services
