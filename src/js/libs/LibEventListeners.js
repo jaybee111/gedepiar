@@ -54,6 +54,7 @@ export default class LibEventListeners {
   activateServices() {
     this.settings.eventbus.subscribe('services-activate', (servicesActivate) => {
       servicesActivate.forEach((item) => {
+        localStorage.setItem('gedepiar-accepted', true);
         const service = this.settings.services[item];
         const elements = document.querySelectorAll(`[data-gedepiar-service="${service.alias}"]`);
         // Set local storage entry

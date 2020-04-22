@@ -26,7 +26,6 @@ export default class LayoutInfo {
     const btnAccept = new LayoutBtn(dataBtnAccept).render();
     btnAccept.addEventListener('click', (e) => {
       e.preventDefault();
-      localStorage.setItem('gedepiar-accepted', true);
       this.settings.eventbus.publish('services-activate', this.settings.servicesAliasList);
       this.settings.eventbus.publish('info-close');
     });
