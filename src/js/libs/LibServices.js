@@ -23,6 +23,13 @@ export default class LibServices {
           const overlay = document.createElement('div');
           overlay.classList.add('gedepiar-overlay', `gedepiar-overlay-${item.alias}`);
 
+          // Preview image
+          const previewImg = element.getAttribute('data-gedepiar-overlay-img');
+          if (previewImg) {
+            overlay.classList.add('has-img');
+            overlay.setAttribute('style', `background-image:url(${previewImg})`);
+          }
+
           const overlayInner = document.createElement('div');
           overlayInner.classList.add('gedepiar-overlay__inner');
 
@@ -116,7 +123,7 @@ export default class LibServices {
         } else if (element.tagName.toLowerCase() === 'script' && element.hasAttribute('src')) {
           // Scripttag
           servicesHolder[alias].elements.script.push(element);
-        } else if (element.hasAttribute('data-gedepiar-overlay')) {
+        } else if (element.hasAttribute('data-gedepiar-overlay') || element.hasAttribute('data-gedepiar-overlay-img')) {
           // Html-Tag with overlay
           servicesHolder[alias].elements.overlay.push(element);
         } else {

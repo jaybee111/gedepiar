@@ -1,5 +1,5 @@
 # Gedepiar
-A dependency-free Cookie-Banner for managing your website/webapp cookies and external ressources. Based on GDPR-Guidelines 
+A dependency-free Cookie-Banner for managing your website/webapp cookies and external resources. Based on GDPR-Guidelines 
 
 ## Table of contents
 
@@ -57,8 +57,9 @@ Every service has an unique alias (e.g. Google Analytics = ga). This alias is us
 
 | Attribute     | Description  |
 | ------------- | --------- |
-| data-gedepiar-service | This alias is used to identify the related HTML-Tags ``data-gedepiar-service="[SERVICE-ALIAS]"``
-| data-gedepiar-overlay | Adds an html-Wrapper which includes explanatory service text and an activation button. This wrapper will be present until the user clicked the activation button. After clicking the activation button the external resource will be loaded (e.g. [Youtube](#youtube))
+| data-gedepiar-service     | This alias is used to identify the related HTML-Tags ``data-gedepiar-service="[SERVICE-ALIAS]"``
+| data-gedepiar-overlay     | Adds a html-Wrapper which includes explanatory service text and an activation button. This wrapper will be present until the user clicked the activation button. After clicking the activation button the external resource will be loaded (e.g. [Youtube](#youtube))
+| data-gedepiar-overlay-img | Adds a html-Wrapper which includes explanatory service text, an activation button and a background image. This wrapper will be present until the user clicked the activation button. After clicking the activation button the external resource will be loaded (e.g. [Youtube](#youtube))
 
 The html elements must be marked as follows:
 
