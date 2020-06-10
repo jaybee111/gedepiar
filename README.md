@@ -35,8 +35,8 @@ Recommended step for projects without a task-runner or module bundler.
 2. Add init-function to your JavaScript-File:
     ````
     // yourCustom.js
-    Gedepiar.init({
-        'services' : ['phpsess','ga','gmap','yt']
+    gedepiar.init({
+        services : ['phpsess','ga','gmap','yt']
     });
     ````
    **Options**
@@ -109,8 +109,8 @@ const twitterService = {
     category: 'comfort',
 };
 
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService]
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt',twitterService]
 });
 
 <blockquote class="twitter-tweet" data-gedepiar-service="twitter" data-gedepiar-overlay>
@@ -147,8 +147,8 @@ const twitterService = {
     },
 };
 
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService]
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt',twitterService]
 }); 
 
 ````
@@ -166,8 +166,8 @@ const twitterService = {
     },
 };
 
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService]
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt',twitterService]
 }); 
 
 ````
@@ -185,8 +185,8 @@ const twitterService = {
     },
 };
 
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService]
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt',twitterService]
 }); 
 
 ````
@@ -197,15 +197,15 @@ Would you like to overwrite a default translation entry? Add the i18n-Option to 
 Look at ``[PATH_TO_NODE_MODULES]/gedepiar/src/js/i18n/`` for all possible entries. 
 
 ````
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt'],
-    'i18n': {
-        'de' : {
-            'ytHeadline': 'Lorem Ipsum',
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt'],
+    i18n: {
+        de : {
+            ytHeadline: 'Lorem Ipsum',
         },
         {
-        'en' : {
-            'ytHeadline': 'Lorem Ipsum',
+        en : {
+            ytHeadline: 'Lorem Ipsum',
         }
     }
 });
@@ -214,10 +214,10 @@ Gedepiar.init({
 Do you need another link for your imprint and data privacy?
 
 ````
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt'],
-    'i18n': {
-        'de' : {
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt'],
+    i18n: {
+        de : {
               dataPrivacyTarget: '/datenschutz-test',
               dataPrivacyLabel: 'Datenschutz Test',
             
@@ -225,7 +225,7 @@ Gedepiar.init({
               imprintLabel: 'Impressum Test',
         },
         {
-        'en' : {
+        en : {
               dataPrivacyTarget: '/data-privacy-test',
               dataPrivacyLabel: 'Data privacy test',
             
@@ -241,21 +241,21 @@ Gedepiar.init({
 By adding an individual service you have to adjust the initialization process by adding entries to the translation object.
 
 ````
-Gedepiar.init({
-    'services' : ['phpsess','ga','gmap','yt',twitterService],
-    'i18n': {
-        'de' : {
-            'twitterHeadline': 'Twitter',
-            'twitterOverlayHeadline': 'Twitter is deaktiviert',
-            'twitterOverlayContent': 'Das ist eine Beschreibung zum Twitter-Plugin',
-            'twitterOverlayBtnLabel': 'Aktivieren',
+gedepiar.init({
+    services : ['phpsess','ga','gmap','yt',twitterService],
+    i18n: {
+        de : {
+            twitterHeadline: 'Twitter',
+            twitterOverlayHeadline: 'Twitter is deaktiviert',
+            twitterOverlayContent: 'Das ist eine Beschreibung zum Twitter-Plugin',
+            twitterOverlayBtnLabel: 'Aktivieren',
         },
         {
-        'en' : {
-            'twitterHeadline': 'Twitter',
-            'twitterOverlayHeadline': 'Twitter',
-            'twitterOverlayContent': 'A description about the Twitter-Plugin',
-            'twitterOverlayBtnLabel': 'Activate',
+        en : {
+            twitterHeadline: 'Twitter',
+            twitterOverlayHeadline: 'Twitter',
+            twitterOverlayContent: 'A description about the Twitter-Plugin',
+            twitterOverlayBtnLabel: 'Activate',
         }
     }
 });
