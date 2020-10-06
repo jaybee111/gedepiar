@@ -146,7 +146,7 @@ export default class LibEventListeners {
 
         // Execute custom disable-Function
         if (typeof service.onDisable === 'function') {
-          item.onDisable(elements, this.settings);
+          service.onDisable(elements, this.settings);
         }
       });
     });
