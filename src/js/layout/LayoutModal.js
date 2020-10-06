@@ -172,8 +172,7 @@ export default class LayoutModal {
     const btnSaveAll = new LayoutBtn(btnSaveAllAttr).render();
     btnSaveAll.addEventListener('click', (e) => {
       e.preventDefault();
-      const activateServices = this.settings.servicesAliasList.filter((item) => localStorage.getItem(`gedepiar-enabled-${item}`) !== 'true');
-      this.settings.eventbus.publish('services-activate', activateServices);
+      this.settings.eventbus.publish('services-activate', this.settings.servicesAliasList);
       this.settings.eventbus.publish('info-close');
       this.settings.eventbus.publish('modal-close');
     });

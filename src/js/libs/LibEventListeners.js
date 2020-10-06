@@ -63,7 +63,7 @@ export default class LibEventListeners {
         // Select all checkbox input and set checked status
         const checkbox = document.getElementById(`gedepiar-checkbox-input-${service.alias}`);
         if (this.settings.outputHelper.isDomEl(checkbox)) {
-          checkbox.classList.add('is-active');
+          checkbox.closest('.gedepiar-checkbox-input-wrapper').classList.add('is-active');
           checkbox.checked = true;
         }
 
