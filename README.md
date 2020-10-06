@@ -46,6 +46,7 @@ Recommended step for projects without a task-runner or module bundler.
     | services      | array         | []       | Services to be managed by the cookie banner. Possible options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
     | i18n          | object        | {}       | Override default translation. Look at [Translation](#translation) for further information.
     | fallbackLang  | string        | en       | If the translation is not available, the defined language is loaded
+    | showModalBtn  | boolean       | true     | A Button will be shown in the left corner on every website to open the cookie settings modal.
 
 3. Add data-attributes to HTML-Tags. For further information go to [Services](#services).
 

@@ -1,0 +1,12 @@
+.gedepiar-modal-btn {
+  position: fixed;
+  bottom:15px;
+  left:15px;
+  z-index:8000;
+  width:25px;
+  height: 25px;
+  background: $gedepiar-color-primary;
+  fill: #fff;
+  padding:10px;
+  border-radius: 50%;
+}

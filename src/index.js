@@ -1,6 +1,7 @@
 // CSS
 import './css/info.scss';
 import './css/modal.scss';
+import './css/modal-btn.scss';
 import './css/checkbox.scss';
 import './css/overlay.scss';
 
@@ -13,6 +14,7 @@ import LibServices from './js/libs/LibServices';
 // import LayoutHandler from './js/layout/LayoutModalHandler';
 import LayoutModal from './js/layout/LayoutModal';
 import LayoutInfo from './js/layout/LayoutInfo';
+import LayoutModalBtn from './js/layout/LayoutModalBtn';
 
 // Translation
 import I18nDe from './js/i18n/I18nDe';
@@ -31,6 +33,7 @@ export default class Gedepiar {
         de: I18nDe,
         en: I18nEn,
       },
+      showModalBtn: true,
     };
     const settings = { ...defaultSettings, ...customSettings };
 
@@ -78,6 +81,12 @@ export default class Gedepiar {
     // Add Cookie-Modal to DOM
     const modal = new LayoutModal(settings).render();
     body.appendChild(modal);
+
+    // Add Cookie-Modal-Button to DOM
+    if (settings.showModalBtn) {
+      const modalBtn = new LayoutModalBtn(settings).render();
+      body.appendChild(modalBtn);
+    }
 
     // Add Cookie-Info to DOM
     const info = new LayoutInfo(settings).render();

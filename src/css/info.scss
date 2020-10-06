@@ -5,6 +5,7 @@
   padding:15px;
   display: none;
   box-shadow: -1px -5px 36px -11px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 
   * {
     box-sizing: border-box;
@@ -59,6 +60,7 @@
 
 .gedepiar-info__btn {
   padding:15px;
+  margin: 0 0 10px;
   display: block;
   text-align: center;
   border-radius:3px;
@@ -74,6 +76,16 @@
 }
 
 .gedepiar-info__btn-accept {
+  background-color:$gedepiar-color-primary;
+  text-decoration: none;
+  color:#fff;
+
+  &:hover {
+    color:#fff;
+  }
+}
+
+.gedepiar-info__btn-accept-essential {
   background-color:$gedepiar-color-primary;
   text-decoration: none;
   color:#fff;
@@ -110,19 +122,16 @@
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .gedepiar-info__btn {
-    display: inline-block;
-    text-align: left;
-  }
-}
-
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .gedepiar-info {
     &.is-right {
       width:500px;
     }
+  }
+  .gedepiar-info__btn {
+    display: inline-block;
+    text-align: left;
+    margin: 0 15px 0 0;
   }
 }

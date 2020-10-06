@@ -1,6 +1,7 @@
 const I18nDe = {
   infoText: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Weitere Informationen finden Sie in unserem {{dataPrivacyTarget}}.',
-  infoBtnAccept: 'Akzeptieren',
+  infoBtnAccept: 'Alle akzeptieren',
+  infoBtnAcceptEssential: 'Nur notwendige Cookies akzeptieren',
   infoBtnEdit: 'Cookie-Einstellungen anpassen',
   modalHeadline: 'Datenschutzeinstellungen',
   modalHeadlineSettings: 'Einstellungen',
