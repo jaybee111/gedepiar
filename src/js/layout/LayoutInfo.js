@@ -17,7 +17,7 @@ export default class LayoutInfo {
   render() {
     // Button accept all
     const dataBtnAccept = {
-      label: this.settings.translation.infoBtnAccept,
+      labelHtml: this.settings.translation.infoBtnAccept,
       attributes: [
         { href: '#' },
         { class: ['gedepiar-info__btn-accept', 'gedepiar-info__btn'] },
@@ -27,6 +27,20 @@ export default class LayoutInfo {
     btnAccept.addEventListener('click', (e) => {
       e.preventDefault();
       this.settings.eventbus.publish('services-activate', this.settings.servicesAliasList);
+      this.settings.eventbus.publish('info-close');
+    });
+
+    // Button accept Essential
+    const dataBtnAcceptEssential = {
+      label: this.settings.translation.infoBtnAcceptEssential,
+      attributes: [
+        { href: '#' },
+        { class: ['gedepiar-info__btn-accept-essential', 'gedepiar-info__btn'] },
+      ],
+    };
+    const btnAcceptEssential = new LayoutBtn(dataBtnAcceptEssential).render();
+    btnAcceptEssential.addEventListener('click', (e) => {
+      e.preventDefault();
       this.settings.eventbus.publish('info-close');
     });
 
@@ -92,6 +106,7 @@ export default class LayoutInfo {
     divInner.classList.add('gedepiar-info__inner');
     divInner.appendChild(infoText);
     divInner.appendChild(btnAccept);
+    divInner.appendChild(btnAcceptEssential);
     divInner.appendChild(btnEdit);
     divInner.appendChild(footnav);
     divWrapper.appendChild(divInner);
