@@ -41,6 +41,7 @@ export default class LayoutInfo {
     const btnAcceptEssential = new LayoutBtn(dataBtnAcceptEssential).render();
     btnAcceptEssential.addEventListener('click', (e) => {
       e.preventDefault();
+      localStorage.setItem('gedepiar-accepted', true);
       this.settings.eventbus.publish('info-close');
     });
 
