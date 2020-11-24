@@ -28,12 +28,12 @@ const I18nDe = {
 
   ytHeadline: 'Youtube',
   ytOverlayHeadline: 'Youtube ist deaktiviert',
-  ytOverlayContent: 'Wenn Du Dir das Video anzeigen lassen möchtest, musst Du Youtube aktivieren. Bitte bedenke dabei, dass wir nach dem Aktivieren von Youtube Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
+  ytOverlayContent: 'Wenn Sie sich das Video anzeigen lassen möchten, müssen Sie Youtube aktivieren. Bitte bedenken Sie dabei, dass wir nach dem Aktivieren von Youtube Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
   ytOverlayBtnLabel: 'Aktivieren',
 
   gmapHeadline: 'Google Maps',
   gmapOverlayHeadline: 'Google Maps ist deaktiviert',
-  gmapOverlayContent: 'Wenn Du Dir die interaktive Karte anzeigen lassen möchtest, musst Du Google Maps aktivieren. Bitte bedenke dabei, dass wir nach dem Aktivieren von Goole Maps Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
+  gmapOverlayContent: 'Wenn Sie sich die interaktive Karte anzeigen lassen möchten, müssen Sie Google Maps aktivieren. Bitte bedenken Sie dabei, dass wir nach dem Aktivieren von Google Maps Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
   gmapOverlayBtnLabel: 'Aktivieren',
 
   gaHeadline: 'Google Analytics',
