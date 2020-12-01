@@ -50,7 +50,7 @@
 
 .gedepiar-info__data-privacy-link {
   font-size:$gedepiar-font-size-base;
-  text-decoration: none;
+  text-decoration: underline;
   color:$gedepiar-color-primary;
 
   &:hover {
@@ -68,7 +68,14 @@
   font-size:$gedepiar-font-size-base;
   text-decoration: none;
 
+  &:link,
+  &:visited {
+    color:#fff;
+    text-decoration: none;
+  }
+
   &:hover {
+    text-decoration: none;
     opacity: 0.9;
     transition: all 500ms ease;
     color:#fff;
@@ -80,8 +87,15 @@
   text-decoration: none;
   color:#fff;
 
+  &:link,
+  &:visited {
+    color:#fff;
+    text-decoration: none;
+  }
+
   &:hover {
     color:#fff;
+    text-decoration: none;
   }
 }
 
@@ -90,8 +104,15 @@
   text-decoration: none;
   color:#fff;
 
+  &:link,
+  &:visited {
+    color:$gedepiar-color-primary;
+    text-decoration: none;
+  }
+
   &:hover {
     color:#fff;
+    text-decoration: none;
   }
 }
 

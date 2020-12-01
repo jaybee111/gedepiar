@@ -188,7 +188,13 @@
   font-size:$gedepiar-font-size-base;
   text-decoration: none;
 
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
   &:hover {
+    text-decoration: none;
     opacity: 0.9;
     transition: all 500ms ease;
     color:#fff;
@@ -202,6 +208,11 @@
   margin:0 0 0 15px;
   text-decoration: none;
 
+  &:link,
+  &:visited {
+    color:$gedepiar-color-primary;
+  }
+
   &:hover {
     color:$gedepiar-color-primary;
   }
@@ -214,6 +225,11 @@
   color:#fff;
   margin:0 0 0 15px;
   text-decoration: none;
+
+  &:link,
+  &:visited {
+    color:#fff;
+  }
 
   &:hover {
     color:#fff;

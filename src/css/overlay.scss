@@ -5,6 +5,7 @@
 }
 
 .gedepiar-overlay {
+  background-size: cover;
   position: absolute;
   top:0;
   left:0;
@@ -74,9 +75,15 @@
   font-size:$gedepiar-font-size-base;
   text-decoration: none;
   background-color:$gedepiar-color-primary;
-  color:#fff;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color:#fff;
+  }
 
   &:hover {
+    text-decoration: none;
     opacity: 0.9;
     transition: all 500ms ease;
     color:#fff;
