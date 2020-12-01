@@ -57,7 +57,8 @@
     },
     "files": [
         "dist/*.{css,js,map}",
-        "src/css/**/*.scss"
+        "src/css/**/*.scss",
+        "src/js/**/*.js"
     ],
     "eslintConfig": {
         "root": true,
