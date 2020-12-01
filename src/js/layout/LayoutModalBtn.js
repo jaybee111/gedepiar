@@ -19,9 +19,9 @@ export default class LayoutModal {
       ],
     };
     const btn = new LayoutBtn(dataBtn).render();
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       this.settings.eventbus.publish('modal-open');
-      return false;
     });
 
     return btn;
