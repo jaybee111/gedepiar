@@ -98,7 +98,7 @@ The html elements must be marked as follows:
 
 ### Youtube
 ````
-<iframe data-gedepiar-service="yt" data-gedepiar-overlay width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe data-gedepiar-service="yt" data-gedepiar-overlay-img="/absolute/path/to/your/image.jpg" width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ````
 
 ### Individual service
