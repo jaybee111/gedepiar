@@ -2,6 +2,7 @@ const I18nEn = {
   infoText: 'We use cookies to optimise our website and continuously improve it for you. For more information, please see our {{dataPrivacyTarget}}.<br /><br /> I agree and understand that I can revoke or change my consent at any time with effect for the future.',
   infoBtnAccept: 'Accept',
   infoBtnEdit: 'Individual cookie settings',
+  infoBtnAcceptEssential: 'Accept only necessary cookies',
   modalHeadline: 'Privacy settings',
   modalHeadlineSettings: 'Settings',
   modalBtnSave: 'Save settings',
