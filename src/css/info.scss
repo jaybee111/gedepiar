@@ -106,7 +106,7 @@
 
   &:link,
   &:visited {
-    color:$gedepiar-color-primary;
+    color:#fff;
     text-decoration: none;
   }
 
@@ -119,6 +119,12 @@
 .gedepiar-info__btn-edit {
   color:$gedepiar-color-primary;
   text-decoration: none;
+
+  &:link,
+  &:visited {
+    color:$gedepiar-color-primary;
+    text-decoration: none;
+  }
 
   &:hover {
     color:$gedepiar-color-primary;
