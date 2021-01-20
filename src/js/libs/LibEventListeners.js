@@ -80,39 +80,50 @@ export default class LibEventListeners {
 
         // Clone script tags and replace it with old one
         // Load scripts with src-tag first, followed by inline scripts
-        let scriptsLoaded = 0;
-        service.elements.script.forEach((scriptItem) => {
-          // Build new script-tag
-          const newScript = document.createElement('script');
-          for (let z = 0; z < scriptItem.attributes.length; z += 1) {
-            const attr = scriptItem.attributes[z];
-            newScript.setAttribute(attr.name, attr.value);
-          }
-          newScript.setAttribute('type', 'text/javascript');
-          if (scriptItem.parentNode !== null) {
-            scriptItem.parentNode.replaceChild(newScript, scriptItem);
-          }
-
-          // Check if all scripts have been loaded
-          newScript.onload = () => {
-            scriptsLoaded += 1;
-            if (scriptsLoaded === service.elements.script.length) {
-              // Add inline scripts
-              service.elements.inlineScript.forEach((inlineScriptItem) => {
-                const newInlineScript = document.createElement('script');
-                for (let z = 0; z < inlineScriptItem.attributes.length; z += 1) {
-                  const attr = inlineScriptItem.attributes[z];
-                  newInlineScript.setAttribute(attr.name, attr.value);
-                }
-                newInlineScript.innerHTML = inlineScriptItem.innerHTML;
-                newInlineScript.setAttribute('type', 'text/javascript');
-                if (inlineScriptItem.parentNode !== null) {
-                  inlineScriptItem.parentNode.replaceChild(newInlineScript, inlineScriptItem);
-                }
-              });
+        const processInlineScripts = () => {
+          service.elements.inlineScript.forEach((inlineScriptItem) => {
+            const newInlineScript = document.createElement('script');
+            for (let z = 0; z < inlineScriptItem.attributes.length; z += 1) {
+              const attr = inlineScriptItem.attributes[z];
+              newInlineScript.setAttribute(attr.name, attr.value);
             }
-          };
-        });
+            newInlineScript.innerHTML = inlineScriptItem.innerHTML;
+            newInlineScript.setAttribute('type', 'text/javascript');
+            if (inlineScriptItem.parentNode !== null) {
+              inlineScriptItem.parentNode.replaceChild(newInlineScript, inlineScriptItem);
+            }
+          });
+        };
+
+        if (service.elements.script.length) {
+          let scriptsLoaded = 0;
+          service.elements.script.forEach((scriptItem) => {
+            // Build new script-tag
+            const newScript = document.createElement('script');
+            for (let z = 0; z < scriptItem.attributes.length; z += 1) {
+              const attr = scriptItem.attributes[z];
+              newScript.setAttribute(attr.name, attr.value);
+            }
+            newScript.setAttribute('type', 'text/javascript');
+            if (scriptItem.parentNode !== null) {
+              scriptItem.parentNode.replaceChild(newScript, scriptItem);
+            }
+
+            // Check if all scripts have been loaded
+            newScript.onload = () => {
+              scriptsLoaded += 1;
+              if (scriptsLoaded === service.elements.script.length) {
+                // Add inline scripts
+                processInlineScripts();
+              }
+            };
+          });
+        }
+
+        // If only inline scripts exist
+        if (!service.elements.script.length && service.elements.inlineScript.length) {
+          processInlineScripts();
+        }
 
         // Execute custom activate-Function
         if (typeof service.onActivate === 'function') {
