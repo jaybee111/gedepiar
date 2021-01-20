@@ -3,6 +3,8 @@ import ServiceGa from '../services/ServiceGa';
 import ServiceGmap from '../services/ServiceGmap';
 import ServiceYt from '../services/ServiceYt';
 import ServicePhpSession from '../services/ServicePhpSession';
+import ServiceVimeo from '../services/ServiceVimeo';
+import ServiceMatomo from '../services/ServiceMatomo';
 
 export default class LibServices {
   /**
@@ -93,10 +95,14 @@ export default class LibServices {
       if (typeof item === 'string') {
         if (item === 'ga') {
           servicesHolder[item] = ServiceGa;
+        } else if (item === 'matomo') {
+          servicesHolder[item] = ServiceMatomo;
         } else if (item === 'gmap') {
           servicesHolder[item] = ServiceGmap;
         } else if (item === 'yt') {
           servicesHolder[item] = ServiceYt;
+        } else if (item === 'vimeo') {
+          servicesHolder[item] = ServiceVimeo;
         } else if (item === 'phpsess') {
           servicesHolder[item] = ServicePhpSession;
         }

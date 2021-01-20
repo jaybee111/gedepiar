@@ -33,9 +33,15 @@ const I18nEn = {
 
   gmapHeadline: 'Google Maps',
   gmapOverlayHeadline: 'Google Maps is disabled',
-  gmapOverlayContent: 'Wenn Du Dir die interaktive Karte anzeigen lassen möchtest, musst Du Google Maps aktivieren. Bitte bedenke dabei, dass wir nach dem Aktivieren von Goole Maps Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
+  gmapOverlayContent: 'If you want to see the interactive map, you have to activate Google Maps. Please keep in mind that after activating Goole Maps we will retrieve information from the Google servers. We cannot prevent the possibility of personal data being transferred to the Google server.',
   gmapOverlayBtnLabel: 'Enable',
 
+  vimeoHeadline: 'Vimeo',
+  vimeoOverlayHeadline: 'Vimeo is disabled',
+  vimeoOverlayContent: 'If you want to see the video, you have to activate Vimeo. Please keep in mind that after activating Vimeo we will retrieve information from the Vimeo servers. We cannot prevent the possibility of personal data being transferred to the Vimeo server.',
+  vimeoOverlayBtnLabel: 'Enable',
+
+  matomoHeadline: 'Matomo',
   gaHeadline: 'Google Analytics',
   phpsessHeadline: 'Session-Cookie',
 };

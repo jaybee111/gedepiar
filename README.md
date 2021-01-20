@@ -43,7 +43,7 @@ Recommended step for projects without a task-runner or module bundler.
 
     | Attribute     | Type          | Default  | Description  |
     | ------------- | ------------- | -------- | -------- |
-    | services      | array         | []       | Services to be managed by the cookie banner. Possible options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Youtube ``yt``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
+    | services      | array         | []       | Services to be managed by the cookie banner. Possible options: Google Analytics ``ga``, Google Maps ``gmap``, PHP-Session Cookie ``phpsess``, Matomo ``matomo``, Youtube ``yt``, Vimeo ``vimeo``. Need other services? No Problem! Add your own service. Look at [Services](#individual-service).
     | i18n          | object        | {}       | Override default translation. Look at [Translation](#translation) for further information.
     | fallbackLang  | string        | en       | If the translation is not available, the defined language is loaded
     | showModalBtn  | boolean       | true     | A Button will be shown in the left corner on every website to open the cookie settings modal.
@@ -96,9 +96,33 @@ The html elements must be marked as follows:
 </script>
 ````
 
+### Matomo
+
+````
+<script type="text/plain" data-gedepiar-service="matomo">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://my.domain.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 'XXX']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+````
+
 ### Youtube
 ````
 <iframe data-gedepiar-service="yt" data-gedepiar-overlay-img="/absolute/path/to/your/image.jpg" width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+````
+
+### Vimeo
+````
+<iframe data-gedepiar-service="vimeo" data-gedepiar-overlay-img="/absolute/path/to/your/image.jpg" width="560" height="315" src="" data-src="https://player.vimeo.com/video/305151042" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ````
 
 ### Individual service

@@ -36,6 +36,12 @@ const I18nDe = {
   gmapOverlayContent: 'Wenn Sie sich die interaktive Karte anzeigen lassen möchten, müssen Sie Google Maps aktivieren. Bitte bedenken Sie dabei, dass wir nach dem Aktivieren von Google Maps Informationen von den Google-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Google-Server können wir nicht ausschließen.',
   gmapOverlayBtnLabel: 'Aktivieren',
 
+  vimeoHeadline: 'Vimeo',
+  vimeoOverlayHeadline: 'Vimeo ist deaktiviert',
+  vimeoOverlayContent: 'Wenn Sie sich das Video anzeigen lassen möchten, müssen Sie Vimeo aktivieren. Bitte bedenken Sie dabei, dass wir nach dem Aktivieren von Vimeo Informationen von den Vimeo-Servern abrufen. Eine Übertragung von personenbezogenen Daten an die Vimeo-Server können wir nicht ausschließen.',
+  vimeoOverlayBtnLabel: 'Aktivieren',
+
+  matomoHeadline: 'Matomo',
   gaHeadline: 'Google Analytics',
   phpsessHeadline: 'Sitzungs-Cookie',
 };

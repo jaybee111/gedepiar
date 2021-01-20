@@ -1,5 +1,5 @@
 const ServiceYt = {
-  alias: 'yt',
+  alias: 'vimeo',
   category: 'comfort',
   translation: '',
 };
