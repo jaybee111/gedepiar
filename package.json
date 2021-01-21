@@ -1,6 +1,6 @@
 {
     "name": "gedepiar",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "A dependency-free JavaScript-Tool for managing your cookies of your website/webapp. Based on GDPR-Guidelines.",
     "main": "dist/gedepiar.js",
     "scripts": {
