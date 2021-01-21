@@ -1,7 +1,7 @@
-const ServiceYt = {
+const ServiceVimeo = {
   alias: 'vimeo',
   category: 'comfort',
   translation: '',
 };
 
-export default ServiceYt;
+export default ServiceVimeo;
