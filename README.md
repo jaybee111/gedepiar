@@ -116,17 +116,31 @@ The html elements must be marked as follows:
 ````
 
 ### Youtube
+
+**Text-Overlay**
+````
+<iframe data-gedepiar-service="yt" data-gedepiar-overlay width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+````
+
+**Image-Overlay**
 ````
 <iframe data-gedepiar-service="yt" data-gedepiar-overlay-img="/absolute/path/to/your/image.jpg" width="560" height="315" src="" data-src="https://www.youtube-nocookie.com/embed/O4Z0o1cxAsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ````
 
 ### Vimeo
+
+**Text-Overlay**
+````
+<iframe data-gedepiar-service="vimeo" data-gedepiar-overlay width="560" height="315" src="" data-src="https://player.vimeo.com/video/305151042" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+````
+
+**Image-Overlay**
 ````
 <iframe data-gedepiar-service="vimeo" data-gedepiar-overlay-img="/absolute/path/to/your/image.jpg" width="560" height="315" src="" data-src="https://player.vimeo.com/video/305151042" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ````
 
 ### Individual service
-Do you need other services? You can add an individual service (e. g. Twitter).
+Do you need other services? Add an individual service object to the init-Function (e. g. twitter).
 
 ````
 const twitterService = {
@@ -155,9 +169,9 @@ gedepiar.init({
 
 **Don't** forget to add translations for your individual service. Look at [translation section](#service-translation).
 
-#### Events
+#### Callbacks
 
-Do you need additional behavior? You can hook into the processes of the lib with events:
+Do you need additional behavior? You can hook into the processes of the lib with callbacks:
 
 **onInit(elements,settings)**
 
@@ -263,7 +277,16 @@ gedepiar.init({
 
 #### Service translation
 
-By adding an individual service you have to adjust the initialization process by adding entries to the translation object.
+Following translation keys are mandatory if you add an individual service:
+
+- ``[INDIVIDUAL-SERVICE-ALIAS]Headline``
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayHeadline`` (optional, is only needed if overlay is present)
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayContent`` (optional, is only needed if overlay is present)
+- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayBtnLabel``(optional, is only needed if overlay is present)
+
+The custom translation entries are merged with the default translation entries.
+
+Twitter-Example:
 
 ````
 gedepiar.init({
@@ -285,15 +308,6 @@ gedepiar.init({
     }
 });
 ````
-
-Every individual need following translation keys:
-
-- ``[INDIVIDUAL-SERVICE-ALIAS]Headline``
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayHeadline`` (optional, is only needed if overlay is present)
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayContent`` (optional, is only needed if overlay is present)
-- ``[INDIVIDUAL-SERVICE-ALIAS]OverlayBtnLabel``(optional, is only needed if overlay is present)
-
-The custom translation entries are merged with the default translation entries.
 
 ## Notes
 
