@@ -105,11 +105,11 @@
 
 .gedepiar-modal__body {
   min-height:30vh;
-  max-height:90vh;
+  max-height:80vh;
   background-color:#fff;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  padding-bottom:77px;
+  padding-bottom:130px;
   overflow: hidden;
   display: flex;
 
@@ -177,6 +177,7 @@
   text-align: right;
   border-bottom-right-radius:5px;
   border-bottom-left-radius:5px;
+  background-color: #fff;
 }
 
 .gedepiar-modal__btn {
@@ -187,6 +188,7 @@
   transition: all 500ms ease;
   font-size:$gedepiar-font-size-base;
   text-decoration: none;
+  margin:0 0 10px;
 
   &:link,
   &:visited {
@@ -202,10 +204,8 @@
 }
 
 .gedepiar-modal__btn-save {
-  display: inline-block;
   border:1px solid $gedepiar-color-primary;
   color:$gedepiar-color-primary;
-  margin:0 0 0 15px;
   text-decoration: none;
 
   &:link,
@@ -219,11 +219,9 @@
 }
 
 .gedepiar-modal__btn-save-all {
-  display: inline-block;
   border:1px solid $gedepiar-color-primary;
   background-color:$gedepiar-color-primary;
   color:#fff;
-  margin:0 0 0 15px;
   text-decoration: none;
 
   &:link,
@@ -233,5 +231,18 @@
 
   &:hover {
     color:#fff;
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) {
+  .gedepiar-modal__body {
+    padding-bottom: 77px;
+  }
+
+  .gedepiar-modal__btn {
+    display: inline-block;
+    margin:0 0 0 15px;
   }
 }
