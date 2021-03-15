@@ -1,5 +1,5 @@
 const I18nDe = {
-  infoText: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Weitere Informationen finden Sie in unserem {{dataPrivacyTarget}}.',
+  infoText: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Bitte beachten Sie. Wenn Sie alle akzeptieren wählen, stimmen Sie der Übermittlung personenbezogener Daten an Drittländer außerhalb des EWR zu (z.B. USA). Insbesondere die USA weisen aktuell nicht das Datenschutzniveau auf, das Sie unter der DSGVO genießen. Weitere Informationen finden Sie in unserem {{dataPrivacyTarget}}.',
   infoBtnAccept: 'Alle akzeptieren',
   infoBtnAcceptEssential: 'Nur notwendige Cookies akzeptieren',
   infoBtnEdit: 'Cookie-Einstellungen anpassen',
@@ -24,7 +24,7 @@ const I18nDe = {
   analyzeCategoryHeadline: 'Marketing / Statistik / Analyse',
   analyzeCategoryText: 'Wir verwenden Cookies zur Analyse und Verbesserung der Webseitennutzung. Hierdurch ist es uns möglich, unsere Webseite für Sie ansprechend zu gestalten und die Nutzung zu erleichtern, indem beispielsweise bestimmte Eingaben so gespeichert werden, dass sie nicht wiederholt eingegeben werden müssen. Entsprechende Cookies werden auch eingesetzt, um die Reichweite und Performance unserer Website zu messen und zu analysieren.',
   comfortCategoryHeadline: 'Komfort',
-  comfortCategoryText: 'Komfortfunktionen verbessern das Benutzererlebnis auf der Webseite. So können zum Beispiel zusätzliche Youtube-Videos den Zusammenhang eines Sachverhalts besser erklären oder GoogleMaps die Standortsuche erleichtern. Um diese Funktionen nutzen zu können, werden zwischen der Website und den Servern des Dienstleiters Informationen ausgestauscht (z.B. IP-Adresse).',
+  comfortCategoryText: 'Komfortfunktionen verbessern das Benutzererlebnis auf der Webseite. So können zum Beispiel zusätzliche Youtube-Videos den Zusammenhang eines Sachverhalts besser erklären oder GoogleMaps die Standortsuche erleichtern. Um diese Funktionen nutzen zu können, werden zwischen der Website und den Servern des Dienstleiters Informationen ausgetauscht (z.B. IP-Adresse). Dies geht mit einer Übermittlung personenbezogener Daten an Drittländer außerhalb des EWR einher, die aktuell nicht das Datenschutzniveau der DSGVO bieten.',
 
   ytHeadline: 'Youtube',
   ytOverlayHeadline: 'Youtube ist deaktiviert',
