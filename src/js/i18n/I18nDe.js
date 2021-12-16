@@ -1,5 +1,6 @@
 const I18nDe = {
-  infoText: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend zu verbessern, verwenden wir Cookies. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Bitte beachten Sie: Wenn Sie "Alle akzeptieren" wählen, stimmen Sie der Übermittlung personenbezogener Daten an Drittländer außerhalb des EWR zu (z.B. USA). Insbesondere die USA weisen aktuell nicht das Datenschutzniveau auf, das Sie unter der DSGVO genießen. Weitere Informationen finden Sie in unserem {{dataPrivacyTarget}}.',  infoBtnAccept: 'Alle akzeptieren',
+  infoText: 'Um unsere Webseite für Sie optimal zu gestalten und fortlaufend zu verbessern, verwenden wir Cookies. Ich bin damit einverstanden und kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Bitte beachten Sie: Wenn Sie "Alle akzeptieren" wählen, stimmen Sie der Übermittlung personenbezogener Daten an Drittländer außerhalb des EWR zu (z.B. USA). Insbesondere die USA weisen aktuell nicht das Datenschutzniveau auf, das Sie unter der DSGVO genießen. Weitere Informationen finden Sie in unserem {{dataPrivacyTarget}}.',
+  infoBtnAccept: 'Alle akzeptieren',
   infoBtnAcceptEssential: 'Nur notwendige Cookies akzeptieren',
   infoBtnEdit: 'Cookie-Einstellungen anpassen',
   modalHeadline: 'Datenschutzeinstellungen',
