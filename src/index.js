@@ -55,12 +55,17 @@ export default class Gedepiar {
 
     // Merge custom translations with default translations
     if (typeof customSettings.i18n === 'object') {
-      if (typeof defaultSettings.i18n[settings.lang] === 'object' && typeof customSettings.i18n[settings.lang] === 'object') {
-        settings.i18n[settings.lang] = {
-          ...defaultSettings.i18n[settings.lang],
-          ...customSettings.i18n[settings.lang],
-        };
-      }
+      const defaultLangs = Object.keys(defaultSettings.i18n);
+      defaultLangs.forEach((item) => {
+        if (typeof defaultSettings.i18n[item] === 'object' && typeof customSettings.i18n[item] === 'object') {
+          settings.i18n[item] = {
+            ...defaultSettings.i18n[item],
+            ...customSettings.i18n[item],
+          };
+        } else {
+          settings.i18n[item] = defaultSettings.i18n[item];
+        }
+      });
     }
 
     if (typeof settings.i18n[settings.lang] === 'object') {

@@ -115,7 +115,13 @@
         <script>
             window.onload = function () {
               gedepiar.init({
-                'services' : ['phpsess','gmap','yt','vimeo','matomo','ga']
+                'services' : ['phpsess','gmap','yt','vimeo','matomo','ga'],
+                i18n: {
+                  de: {
+                    dataPrivacyTarget: '/Datenschutzhinweis',
+                    dataImpressTarget: '/rechtliche-angaben',
+                  },
+                }
               });
             };
         </script>
