@@ -22,10 +22,11 @@ Recommended step for projects with integrated module bundler (e.g. Webpack) or t
 Recommended step for projects without a task-runner or module bundler.
 
 1. Open your shell and clone the repo ``git clone git@github.com:jaybee111/gedepiar.git``
-2. Execute ``npm run build``
-3. Switch to the newly created directory ``dist`` and copy ``gedepiar.min.js`` and ``gedepiar.min.css`` to your projects assets folder. 
-4. Add the CSS-File to your projects head-Tag: ``<link rel="stylesheet" href="/path/to/css/gedepiar.min.css">``
-5. Add the JS-File to the bottom of your projects body-Tag: ``<script type="text/javascript" src="/path/to/js/gedepiar.min.js"></script>``
+2. Execute ``npm install``
+3. Execute ``npm run build``
+4. Switch to the newly created directory ``dist`` and copy ``gedepiar.min.js`` and ``gedepiar.min.css`` to your projects assets folder. 
+5. Add the CSS-File to your projects head-Tag: ``<link rel="stylesheet" href="/path/to/css/gedepiar.min.css">``
+6. Add the JS-File to the bottom of your projects body-Tag: ``<script type="text/javascript" src="/path/to/js/gedepiar.min.js"></script>``
 
 ## Usage
 
