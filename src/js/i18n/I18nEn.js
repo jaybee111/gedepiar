@@ -8,6 +8,7 @@ const I18nEn = {
   modalBtnSave: 'Save settings',
   modalBtnSaveAll: 'Enable all',
   modalBtnClose: 'Close',
+  modalBtnOpenLabel: 'Open cookie settings',
   modalListDivider: 'Services',
 
   dataPrivacyTarget: '/data-privacy',

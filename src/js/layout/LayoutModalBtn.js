@@ -16,6 +16,7 @@ export default class LayoutModal {
       attributes: [
         { href: '#' },
         { class: ['gedepiar-modal-btn'] },
+        { 'aria-label': this.settings.translation.modalBtnOpenLabel },
       ],
     };
     const btn = new LayoutBtn(dataBtn).render();

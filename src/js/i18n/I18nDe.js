@@ -8,6 +8,7 @@ const I18nDe = {
   modalBtnSave: 'Einstellungen speichern',
   modalBtnSaveAll: 'Alle aktivieren',
   modalBtnClose: 'Schließen',
+  modalBtnOpenLabel: 'Cookie-Einstellungen öffnen',
   modalListDivider: 'Dienste',
 
   dataPrivacyTarget: '/datenschutz',
