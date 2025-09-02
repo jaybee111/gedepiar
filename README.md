@@ -16,7 +16,7 @@ A dependency-free Cookie-Banner for managing your website/webapp cookies and ext
 Recommended step for projects with integrated module bundler (e.g. Webpack) or task-runner (e.g. Gulp).
 1. ``npm install gedepiar --save``
 2. Integrate it via the import statement ``import Gedepiar from 'gedepiar'``
-3. Import ``[PATH_TO_NODE_MODULES]/gedepiar/dist/gedepiar.min.css`` to your stylesheets / workflow
+3. Import ``[PATH_TO_NODE_MODULES]/gedepiar/dist/style.css`` to your stylesheets / workflow
 
 ### Installation via cloning repo
 Recommended step for projects without a task-runner or module bundler.
@@ -24,9 +24,9 @@ Recommended step for projects without a task-runner or module bundler.
 1. Open your shell and clone the repo ``git clone git@github.com:jaybee111/gedepiar.git``
 2. Execute ``npm install``
 3. Execute ``npm run build``
-4. Switch to the newly created directory ``dist`` and copy ``gedepiar.min.js`` and ``gedepiar.min.css`` to your projects assets folder. 
-5. Add the CSS-File to your projects head-Tag: ``<link rel="stylesheet" href="/path/to/css/gedepiar.min.css">``
-6. Add the JS-File to the bottom of your projects body-Tag: ``<script type="text/javascript" src="/path/to/js/gedepiar.min.js"></script>``
+4. Switch to the newly created directory ``dist`` and copy ``gedepiar.umd.js`` and ``style.css`` to your projects assets folder. 
+5. Add the CSS-File to your projects head-Tag: ``<link rel="stylesheet" href="/path/to/css/gedepiar.style.css">``
+6. Add the JS-File to the bottom of your projects body-Tag: ``<script type="text/javascript" src="/path/to/js/gedepiar.umd.js"></script>``
 
 ## Usage
 
