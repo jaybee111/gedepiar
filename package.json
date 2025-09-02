@@ -23,7 +23,6 @@
     },
     "homepage": "https://github.com/jaybee111/gedepiar#readme",
     "devDependencies": {
-        "cypress": "^15.0.0",
         "eslint": "^8.57.1",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-plugin-import": "^2.32.0",
