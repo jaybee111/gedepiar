@@ -1,11 +1,11 @@
-$gedepiar-font-size-base: 16px !default;
-$gedepiar-font-size-sm: 14px !default;
-$gedepiar-font-size-h2: 25px !default;
-$gedepiar-font-size-h3: 20px !default;
-$gedepiar-color-text: #5f5e5e !default;
-$gedepiar-color-primary: #009fe3 !default;
-$gedepiar-color-success: #42b983 !default;
-$gedepiar-bg-color-overlay: #eee !default;
+$gedepiar-font-size-base: var(--gedepiar-font-size-base, 16px) !default;
+$gedepiar-font-size-sm: var(--gedepiar-font-size-sm, 14px) !default;
+$gedepiar-font-size-h2: var(--gedepiar-font-size-h2, 25px) !default;
+$gedepiar-font-size-h3: var(--gedepiar-font-size-h3, 20px) !default;
+$gedepiar-color-text: var(--gedepiar-color-text, #5f5e5e) !default;
+$gedepiar-color-primary: var(--gedepiar-color-primary, #009fe3) !default;
+$gedepiar-color-success: var(--gedepiar-color-success, #42b983) !default;
+$gedepiar-bg-color-overlay: var(--gedepiar-bg-color-overlay, #eee) !default;
 
 /* Modal */
-$gedepiar-btn-modal-color: #fff !default;
+$gedepiar-btn-modal-color: var(--gedepiar-btn-modal-color, #fff) !default;

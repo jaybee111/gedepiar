@@ -7,6 +7,7 @@ A dependency-free Cookie-Banner for managing your website/webapp cookies and ext
 - [Usage](#usage)
 - [Services](#services)
 - [Translation](#translation)
+- [Styling](#styling)
 - [Notes](#note)
 - [License](#license)
 
@@ -309,6 +310,22 @@ gedepiar.init({
     }
 });
 ````
+
+## Styling
+
+You can customize the appearance of gedepiar by defining CSS-Variables.
+
+| Variable Name | Default Value |
+|---------------|---------------|
+| `$gedepiar-font-size-base` | `16px` |
+| `$gedepiar-font-size-sm`   | `14px` |
+| `$gedepiar-font-size-h2`   | `25px` |
+| `$gedepiar-font-size-h3`   | `20px` |
+| `$gedepiar-color-text`     | `#5f5e5e` |
+| `$gedepiar-color-primary`  | `#009fe3` |
+| `$gedepiar-color-success`  | `#42b983` |
+| `$gedepiar-bg-color-overlay` | `#eee` |
+| `$gedepiar-btn-modal-color`  | `#fff` |
 
 ## Notes
 
