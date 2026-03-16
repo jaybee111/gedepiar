@@ -5,6 +5,10 @@ on:
     tags:
       - "v*"
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +17,8 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 20
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -22,11 +27,7 @@ jobs:
         run: npm run build --if-present
 
       - name: Publish to npm
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npm publish --provenance
 
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@latest
